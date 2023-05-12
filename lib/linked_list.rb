@@ -2,6 +2,10 @@ class LinkedList
     attr_reader :head
 
     def initialize
-        self.head = nil
+        list.head = nil
+    end
+
+    class Node
+
     end
 end

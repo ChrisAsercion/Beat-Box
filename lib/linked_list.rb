@@ -5,15 +5,24 @@ class LinkedList
         @head = nil
     end
 
-    def is_empty?
+   
+    def append(data)
         if @head == nil
-            return true
+            @head = Node.new(data)
+            #If the list is empty, this will create a new Node
         else
-            return false
+          current_node =@head 
+          until current_node.next_node == nil
+          end
+        current_node.next_node = Node.new(data)
+        data
         end
     end
 
-    def append
-
+    def count
+        counter = 0
+        #for every instance on Node.new(data)
+        #counter += 1
+        
     end
-end
+end  

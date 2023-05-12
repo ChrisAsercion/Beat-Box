@@ -1,11 +1,19 @@
 class LinkedList
-    attr_reader :head
+    attr_reader :head, :list
 
     def initialize
-        list.head = nil
+        @head = nil
     end
 
-    class Node
+    def is_empty?
+        if @head == nil
+            return true
+        else
+            return false
+        end
+    end
+
+    def append
 
     end
 end

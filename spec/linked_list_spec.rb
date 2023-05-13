@@ -25,8 +25,9 @@ RSpec.describe LinkedList do
         expect(list.head.next_node).to eq(nil)
     end
     
-    xit "counts the list" do
+    it "counts the list" do
         list = LinkedList.new
+        list.append("doop")
         expect(list.count).to eq(1)
     end
 
@@ -34,12 +35,12 @@ RSpec.describe LinkedList do
     #     expect(list.to_string).to eq("doop")
     # end 
 
-    it "appends more than one beat " do
-        list = LinkedList.new
-        list.append("doop")
-        list.append("deep")
-        expect()list.to_string().to eq()
-    end
+    # it "appends more than one beat " do
+    #     list = LinkedList.new
+    #     list.append("doop")
+    #     list.append("deep")
+    #     expect()list.to_string().to eq()
+    # end
 
 end 
 

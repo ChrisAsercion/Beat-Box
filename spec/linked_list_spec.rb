@@ -7,11 +7,6 @@ RSpec.describe LinkedList do
         expect(list.head).to eq(nil)
     end
 
-    # it "starts as an empty list" do
-    #     list = LinkedList.new
-    #     expect(list.is_empty?).to eq(true)
-    # end
-    
     it "can append beats" do
         list = LinkedList.new
         list.append("doop")
@@ -31,19 +26,31 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(1)
     end
 
-    # xit "makes the list a string" do
-    #     expect(list.to_string).to eq("doop")
-    # end 
+    it "makes the list a string" do
+        list = LinkedList.new
+        list.append("doop")
+        list.to_string
+        expect(list.to_string).to eq("doop")
+    end 
 
-    # it "appends more than one beat " do
+    # xit "can append multiple nodes" do
     #     list = LinkedList.new
     #     list.append("doop")
     #     list.append("deep")
-    #     expect()list.to_string().to eq()
+    #     expect(list.to_string).to eq("doop deep")
     # end
+
+    
 
 end 
 
 #https://medium.com/analytics-vidhya/implement-a-linked-list-in-ruby-2aae925acd9c
 
 #https://medium.com/@zylberberg.jonathan/linked-lists-f656bd22f2fa#:~:text=Linked%20Lists%20is%20a%20data%20structure%20where%20each%20element%20is,of%20data%20in%20the%20list.
+
+
+ # it "starts as an empty list" do
+    #     list = LinkedList.new
+    #     expect(list.is_empty?).to eq(true)
+    # end
+    

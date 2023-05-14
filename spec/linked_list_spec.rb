@@ -26,23 +26,33 @@ RSpec.describe LinkedList do
         expect(list.count).to eq(1)
     end
 
-    it "makes the list a string" do
+    it "makes the list into a string" do
         list = LinkedList.new
         list.append("doop")
-        list.to_string
         expect(list.to_string).to eq("doop")
     end 
 
-    # xit "can append multiple nodes" do
-    #     list = LinkedList.new
-    #     list.append("doop")
-    #     list.append("deep")
-    #     expect(list.to_string).to eq("doop deep")
-    # end
+    it "can append multiple nodes" do
+        list = LinkedList.new
+        list.append("doop")
+        list.append("deep")
+        expect(list.count).to eq(2)
+        expect(list.to_string).to eq("doop deep")
+    end
 
-    
+    it "can append and prepend" do
+        list = LinkedList.new
+        list.append("plop")
+        expect(list.to_string).to eq("plop")
+        list.append("suu")
+        list.prepend("dop")
+        expect(list.to_string).to eq("dop plop suu")
+        expect(list.count).to eq(3)
+    end
 
+    it ""
 end 
+
 
 #https://medium.com/analytics-vidhya/implement-a-linked-list-in-ruby-2aae925acd9c
 

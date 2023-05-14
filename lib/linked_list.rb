@@ -35,11 +35,27 @@ class LinkedList
             #If the list is empty, it will create a new list
             #Else the new_head is created, new_head will make the next_node the current @head
             #@head is redefined at the new head creating the top of the list
-    def insert
+        
+    # def insert(index, data)
+    #     if @head == nil
+    #         @head = Node.new(data)
+    #     else
+    #         until(current_node.next_node == nil)
+    #             if Node.index ==
+    #         end
+    #     end
+    # end
+    def insert(index, data)
         if @head == nil
             new_head = Node.new(data)
         else
-            
+            current_node = @head
+            (index - 1).times do
+                current_node = current_node.next_node
+            end
+        trailing_node = current_node.next_node
+        current_node.next_node = Node.new(data)
+        current_node.next_node.next_node = trailing_node
         end
     end
 
@@ -67,5 +83,5 @@ class LinkedList
         box.join(" ")  
         #.split gives a space while .join combines the strings.
     end 
-
 end
+

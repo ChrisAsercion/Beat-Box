@@ -19,9 +19,11 @@ class LinkedList
         end 
         data  
     end
+
             #If the list is empty, this will create a new Node
             #until the current_node. next_node shows nil, 
             #this code will run the next_node method to get to the tail
+
     def prepend(data)
         if @head == nil
             new_head = Node.new(data)
@@ -32,6 +34,7 @@ class LinkedList
         end
         data
     end
+
             #If the list is empty, it will create a new list
             #Else the new_head is created, new_head will make the next_node the current @head
             #@head is redefined at the new head creating the top of the list
@@ -45,6 +48,7 @@ class LinkedList
         end
         counter
     end
+
             #Until the current_node gets to the tail and shows nil
             #the current_node will go through next_node 
             #each time current_node moves to the next_node counter gains 1
@@ -63,9 +67,11 @@ class LinkedList
         current_node.next_node.next_node = trailing_node
         end
     end
+
             #Insert will go through list the number or times given (index), but less than one
             #There, trailing node is the node following what will be the new node
             #Once current node is created, next.next is done to append trailing node back on the list
+
     def find(index, index_end = 1)
         current_node = @head
         index.times do 
@@ -86,14 +92,15 @@ class LinkedList
 
     def includes?(data)
         current_node = @head
-        until current_node.next_node == nil 
+        until current_node.next_node == data || current_node.next_node == nil
             current_node = current_node.next_node
-                if current_node.next_node(data) == (data)
-                    true
-                else false
-                end
         end
+        current_node.data == data
     end
+
+            #The method will start at the head and proceed until 
+            # current node.next is either equal to or nil (the end of the list)
+            #The last line checks if the current_node's data is the same as the inputted data
 
     def to_string
         box = []
@@ -103,7 +110,7 @@ class LinkedList
             current_node = current_node.next_node
         end
         box.join(" ")  
-        #.split gives a space while .join combines the strings.
+        
     end 
 end
 

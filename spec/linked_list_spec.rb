@@ -1,5 +1,6 @@
 require "./lib/linked_list"
 require "./lib/node"
+require "./lib/beat_box"
 
 RSpec.describe LinkedList do
     it "linked list exists" do
@@ -85,6 +86,9 @@ RSpec.describe LinkedList do
         list.append("shi")
         list.append("shu")
         list.append("blop")
+        list.pop
+        list.pop
+        expect(list.to_string).to eq("deep woo shi")
     end
 end 
 

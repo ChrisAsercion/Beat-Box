@@ -36,15 +36,20 @@ class LinkedList
             #Else the new_head is created, new_head will make the next_node the current @head
             #@head is redefined at the new head creating the top of the list
         
-    # def insert(index, data)
-    #     if @head == nil
-    #         @head = Node.new(data)
-    #     else
-    #         until(current_node.next_node == nil)
-    #             if Node.index ==
-    #         end
-    #     end
-    # end
+    def count
+        counter = 0
+        current_node =@head
+        until current_node == nil
+            current_node = current_node.next_node
+            counter += 1 
+        end
+        counter
+    end
+            #Until the current_node gets to the tail and shows nil
+            #the current_node will go through next_node 
+            #each time current_node moves to the next_node counter gains 1
+            #return counter number
+
     def insert(index, data)
         if @head == nil
             new_head = Node.new(data)
@@ -58,21 +63,38 @@ class LinkedList
         current_node.next_node.next_node = trailing_node
         end
     end
-
-    def count
-        counter = 0
-        current_node =@head
-        until current_node == nil
+            #Insert will go through list the number or times given (index), but less than one
+            #There, trailing node is the node following what will be the new node
+            #Once current node is created, next.next is done to append trailing node back on the list
+    def find(index, index_end = 1)
+        current_node = @head
+        index.times do 
             current_node = current_node.next_node
-            counter += 1 
         end
-        counter
+        length = index_end - 1
+        string = "#{current_node.data}"
+        length.times do
+            current_node = current_node.next_node
+            string = "#{string} #{current_node.data}"
+        end
+        string
     end
 
-            #Until the current_node gets to the tail and shows nil
-            #the current_node will go through next_node 
-            #each time current_node moves to the next_node counter gains 1
-            #return counter number
+            #Index finds the start of the wanted string 
+            #length is the index_end -1 to create an how long the string should be
+            #length.times do is a loop that inserts current_node.data into a string interpolation
+
+    def includes?(data)
+        current_node = @head
+        until current_node.next_node == nil 
+            current_node = current_node.next_node
+                if current_node.next_node(data) == (data)
+                    true
+                else false
+                end
+        end
+    end
+
     def to_string
         box = []
         current_node =@head

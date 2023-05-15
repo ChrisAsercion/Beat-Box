@@ -58,6 +58,19 @@ RSpec.describe LinkedList do
         list.insert(1, "woo")
         expect(list.to_string).to eq("dop woo plop suu")
     end
+
+    it "can find a portion of the list" do
+        list = LinkedList.new
+        list.append("deep")
+        list.append("woo")
+        list.append("shi")
+        list.append("shu")
+        list.append("blop")
+        expect(list.to_string).to eq("deep woo shi shu blop")
+        expect(list.find(1, 2)).to eq ("woo shi")
+    end
+
+    
 end 
 
 

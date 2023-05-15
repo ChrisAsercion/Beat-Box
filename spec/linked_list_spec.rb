@@ -90,6 +90,12 @@ RSpec.describe LinkedList do
         list.pop
         expect(list.to_string).to eq("deep woo shi")
     end
+
+    it "creates the beat box" do
+        bb = BeatBox.new
+        list = LinkedList.new
+        expect(bb.list).to eq(Node)
+    end
 end 
 
 

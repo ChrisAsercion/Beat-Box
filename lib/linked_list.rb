@@ -41,7 +41,7 @@ class LinkedList
         
     def count
         counter = 0
-        current_node =@head
+        current_node = @head
         until current_node == nil
             current_node = current_node.next_node
             counter += 1 
@@ -99,7 +99,7 @@ class LinkedList
     end
 
             #The method will start at the head and proceed until 
-            # current node.next is either equal to or nil (the end of the list)
+            #current node.next is either equal to or nil (the end of the list)
             #The last line checks if the current_node's data is the same as the inputted data
 
     def pop
@@ -112,7 +112,7 @@ class LinkedList
         popping_node.data
     end
             #edge case: 1 node can't be removed because it can't be removed itself
-            
+
     def to_string
         box = []
         current_node =@head

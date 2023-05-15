@@ -1,3 +1,3 @@
-class beat_box
-    
+class BeatBox
+
 end

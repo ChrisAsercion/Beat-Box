@@ -21,7 +21,7 @@ class LinkedList
 
 #If the list is empty, this will create a new Node
 #until the current_node. next_node shows nil, 
-#this code will run the next_node method to get to the tail
+#This code will run the next_node method to get to the tail
 
     def prepend(data)
         if @head == nil
@@ -68,7 +68,7 @@ class LinkedList
     end
 
 #Insert will go through list the number or times given (index), but less than one
-#There, trailing node is the node following what will be the new node
+#There, trailing_node is the node following what will be the new node
 #Once current node is created, next.next is done to append trailing node back on the list
 
     def find(index, index_end = 1)
@@ -104,9 +104,7 @@ class LinkedList
     def pop
         current_node = @head
         if current_node.next_node == nil
-            popped_node = @head
             @head = nil
-            popped_node.data
         else
             until current_node.next_node.next_node == nil 
                 current_node = current_node.next_node
@@ -122,8 +120,8 @@ class LinkedList
 #This makes it so that the popping_node is the last in the list
 #current_node.next_node is set to nil to cut off the pointer pointing at popping_node
 #popping_node.data can reference which node has been popped.
-
-#edge case: 1 node can't be removed because it can't be removed itself
+#If the list only has 1 node, the if statement at the beginning is filled.
+#@head is assigned to Nil and it loses its information
 
     def to_string
         box = []

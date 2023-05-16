@@ -61,7 +61,7 @@ RSpec.describe LinkedList do
             expect(list.count).to eq(3)
         end
     end
-    
+
     describe "insert" do
         it "can insert into the list " do
             list = LinkedList.new
@@ -106,6 +106,13 @@ RSpec.describe LinkedList do
             list.pop
             list.pop
             expect(list.to_string).to eq("deep woo shi")
+        end
+
+        it "can remove the only node" do
+            list = LinkedList.new
+            list.append("deep")
+            list.pop
+            expect(list.to_string).to eq("")
         end
     end
 end 

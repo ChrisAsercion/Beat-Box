@@ -103,9 +103,9 @@ class LinkedList
 
     def pop
         current_node = @head
-        if current_node.next_node = nil
-            @head = nil
+        if current_node.next_node == nil
             popped_node = @head
+            @head = nil
             popped_node.data
         else
             until current_node.next_node.next_node == nil 

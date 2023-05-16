@@ -103,9 +103,10 @@ RSpec.describe LinkedList do
             list.append("shi")
             list.append("shu")
             list.append("blop")
-            list.pop
+            pop_node=list.pop 
             list.pop
             expect(list.to_string).to eq("deep woo shi")
+            expect(pop_node).to eq("blop")
         end
 
         it "can remove the only node" do

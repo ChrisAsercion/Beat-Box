@@ -110,7 +110,14 @@ class LinkedList
         current_node.next_node = nil
         popping_node.data
     end
-            #edge case: 1 node can't be removed because it can't be removed itself
+
+#This method will go through the list until the current_node's next.next node is nil
+#once the current node is the 2nd to last node, popping_node is assigned to current_node.next_node
+#This makes it so that the popping_node is the last in the list
+#current_node.next_node is set to nil to cut off the pointer pointing at popping_node
+#poppind_node.data can reference which node has been popped.
+
+#edge case: 1 node can't be removed because it can't be removed itself
 
     def to_string
         box = []

@@ -23,6 +23,15 @@ RSpec.describe LinkedList do
             list.append("doop")
             expect(list.head.next_node).to eq(nil)
         end
+
+        it "can append multiple nodes" do
+            list = LinkedList.new
+            list.append("doop")
+            list.append("deep")
+            expect(list.count).to eq(2)
+            expect(list.to_string).to eq("doop deep")
+        end
+
     end
     
     describe "count" do
@@ -42,14 +51,6 @@ RSpec.describe LinkedList do
     end
 
     describe "append and prepend" do
-        it "can append multiple nodes" do
-            list = LinkedList.new
-            list.append("doop")
-            list.append("deep")
-            expect(list.count).to eq(2)
-            expect(list.to_string).to eq("doop deep")
-        end
-
         it "can append and prepend to the list" do
             list = LinkedList.new
             list.append("plop")
@@ -60,6 +61,7 @@ RSpec.describe LinkedList do
             expect(list.count).to eq(3)
         end
     end
+    
     describe "insert" do
         it "can insert into the list " do
             list = LinkedList.new
@@ -93,16 +95,17 @@ RSpec.describe LinkedList do
             expect(list.includes?("deep")).to eq(true)
         end
     end
-
-    it "can remove the last node from the list" do
-        list = LinkedList.new
-        list.append("deep")
-        list.append("woo")
-        list.append("shi")
-        list.append("shu")
-        list.append("blop")
-        list.pop
-        list.pop
-        expect(list.to_string).to eq("deep woo shi")
+    describe "pop" do
+        it "can remove the last node from the list" do
+            list = LinkedList.new
+            list.append("deep")
+            list.append("woo")
+            list.append("shi")
+            list.append("shu")
+            list.append("blop")
+            list.pop
+            list.pop
+            expect(list.to_string).to eq("deep woo shi")
+        end
     end
 end 

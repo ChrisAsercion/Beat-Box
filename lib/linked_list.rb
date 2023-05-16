@@ -19,9 +19,9 @@ class LinkedList
         data  
     end
 
-            #If the list is empty, this will create a new Node
-            #until the current_node. next_node shows nil, 
-            #this code will run the next_node method to get to the tail
+#If the list is empty, this will create a new Node
+#until the current_node. next_node shows nil, 
+#this code will run the next_node method to get to the tail
 
     def prepend(data)
         if @head == nil
@@ -34,9 +34,9 @@ class LinkedList
         data
     end
 
-            #If the list is empty, it will create a new list
-            #Else the new_head is created, new_head will make the next_node the current @head
-            #@head is redefined at the new head creating the top of the list
+#If the list is empty, it will create a new list
+#Else the new_head is created, new_head will make the next_node the current @head
+#@head is redefined at the new head creating the top of the list
         
     def count
         counter = 0
@@ -48,10 +48,10 @@ class LinkedList
         counter
     end
 
-            #Until the current_node gets to the tail and shows nil
-            #the current_node will go through next_node 
-            #each time current_node moves to the next_node counter gains 1
-            #return counter number
+#Until the current_node gets to the tail and shows nil
+#the current_node will go through next_node 
+#each time current_node moves to the next_node counter gains 1
+#return counter number
 
     def insert(index, data)
         if @head == nil
@@ -67,9 +67,9 @@ class LinkedList
         end
     end
 
-            #Insert will go through list the number or times given (index), but less than one
-            #There, trailing node is the node following what will be the new node
-            #Once current node is created, next.next is done to append trailing node back on the list
+#Insert will go through list the number or times given (index), but less than one
+#There, trailing node is the node following what will be the new node
+#Once current node is created, next.next is done to append trailing node back on the list
 
     def find(index, index_end = 1)
         current_node = @head
@@ -85,9 +85,9 @@ class LinkedList
         string
     end
 
-            #Index finds the start of the wanted string 
-            #length is the index_end -1 to create an how long the string should be
-            #length.times do is a loop that inserts current_node.data into a string interpolation
+#Index finds the start of the wanted string 
+#length is the index_end -1 to create an how long the string should be
+#length.times do is a loop that inserts current_node.data into a string interpolation
 
     def includes?(data)
         current_node = @head
@@ -97,9 +97,9 @@ class LinkedList
         current_node.data == data
     end
 
-            #The method will start at the head and proceed until 
-            #current node.next is either equal to or nil (the end of the list)
-            #The last line checks if the current_node's data is the same as the inputted data
+#The method will start at the head and proceed until 
+#current_node.next is either equal to or nil (the end of the list)
+#The last line checks if the current_node's data is the same as the inputted data
 
     def pop
         current_node = @head
@@ -122,9 +122,9 @@ class LinkedList
         box.join(" ")  
     end 
 
-            #The to_string method starts as a box array that shovels in the current_node.data
-            #This is dine with the until loop finishing at the end (nil)
-            #The array is turned into a full string with the built in join method
-            #A string with a space is attached to add a space inbetween each node data (each word)
+#The to_string method starts as a box array that shovels in the current_node.data
+#This is done with the until loop finishing at the end (nil)
+#The array is turned into a full string with the built in join method
+#A string with a space is attached to add a space inbetween each node data (each word)
 end
 

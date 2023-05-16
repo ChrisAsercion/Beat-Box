@@ -105,20 +105,4 @@ RSpec.describe LinkedList do
         list.pop
         expect(list.to_string).to eq("deep woo shi")
     end
-
-    
-    #expect().to eq(expect(bb.play).to eq(`say -r 150 -v Boing "deep doo ditt woo hoo shu"`))
-
 end 
-
-
-#https://medium.com/analytics-vidhya/implement-a-linked-list-in-ruby-2aae925acd9c
-
-#https://medium.com/@zylberberg.jonathan/linked-lists-f656bd22f2fa#:~:text=Linked%20Lists%20is%20a%20data%20structure%20where%20each%20element%20is,of%20data%20in%20the%20list.
-
-
- # it "starts as an empty list" do
-    #     list = LinkedList.new
-    #     expect(list.is_empty?).to eq(true)
-    # end
-    

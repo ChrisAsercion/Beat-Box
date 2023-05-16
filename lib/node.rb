@@ -6,4 +6,6 @@ class Node
         @data      = data 
         @next_node = next_node
     end
+#data represents the values that we are putting in (the sounds)
+#next_node is the node appearing after current_node
 end

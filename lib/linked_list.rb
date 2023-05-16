@@ -103,19 +103,25 @@ class LinkedList
 
     def pop
         current_node = @head
-        until current_node.next_node.next_node == nil 
-            current_node = current_node.next_node
+        if current_node.next_node = nil
+            @head = nil
+            popped_node = @head
+            popped_node.data
+        else
+            until current_node.next_node.next_node == nil 
+                current_node = current_node.next_node
+            end
+            popping_node = current_node.next_node
+            current_node.next_node = nil
+            popping_node.data
         end
-        popping_node = current_node.next_node
-        current_node.next_node = nil
-        popping_node.data
     end
 
 #This method will go through the list until the current_node's next.next node is nil
-#once the current node is the 2nd to last node, popping_node is assigned to current_node.next_node
+#Once the current node is the 2nd to last node, popping_node is assigned to current_node.next_node
 #This makes it so that the popping_node is the last in the list
 #current_node.next_node is set to nil to cut off the pointer pointing at popping_node
-#poppind_node.data can reference which node has been popped.
+#popping_node.data can reference which node has been popped.
 
 #edge case: 1 node can't be removed because it can't be removed itself
 

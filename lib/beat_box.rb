@@ -18,7 +18,7 @@ class BeatBox
     end
 
     def play
-
+        `say -r 500 -v Boing #{data}`
     end
     
 
